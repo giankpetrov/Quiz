@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,8 @@
 body {
     background: url(/assets/images/backgroundgeneral.webp) no-repeat center / cover;
     min-height: 100vh;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
 }
 .container {
     max-width: 100vw;
@@ -71,9 +74,13 @@ body {
     margin: 1rem;
     padding: 1rem;
     font-size: 1.2rem;
-    text-transform: uppercase;
     line-height: 1.3;
     display: none;
+}
+.readyone h2 {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
 }
 .play-btn{
     display: none;
