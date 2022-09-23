@@ -58,6 +58,57 @@ body {
     transform: translateY(-5px);
     transition: all .3s;
 }
+/*Instruction page*/
+.readyone{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    align-self: center;
+    transform: translateY(-0.5%);
+    box-shadow: 0 10px 20px;
+    color: #fff;
+    height: 70%;
+    margin: 1rem;
+    padding: 1rem;
+    display: none;
+
+}
+.readytwo{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    align-self: center;
+    transform: translateY(-0.5%);
+    box-shadow: 0 10px 20px;
+    color: #fff;
+    height: 70%;
+    margin: 1rem;
+    padding: 1rem;
+    display: none;
+}
+.ready-btn{
+    display: none;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    align-self: center;
+    text-align: center;
+}
+.ready-btn button{
+    height: 3rem;
+    width: 10rem;
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.ready-btn button:hover{
+    color: #fff;
+    background-color: #56042C;
+    box-shadow: 0 10px 20px;
+    transform: translateY(-5px);
+    transition: all .3s;
+}
 /*Media Query responsive*/
 @media screen and (max-width: 1024px){
     
