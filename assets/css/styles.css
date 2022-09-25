@@ -39,11 +39,15 @@ body {
     grid-column: 2;
     grid-row: 1;
 }
+.text-front h2 {
+    font-size: 2.5rem;
+}
 .front-btn {
     text-align: center;
     align-self: center;
     grid-column: 2;
     grid-row: 2;
+    margin-bottom: 100px;
 }
 .front-btn button{
     height: 3rem;
@@ -88,6 +92,7 @@ body {
     grid-row: 2;
     align-self: center;
     text-align: center;
+    margin-bottom: 100px;
 }
 .play-btn button{
     height: 3rem;
@@ -104,6 +109,22 @@ body {
     box-shadow: 0 10px 20px;
     transform: translateY(-5px);
     transition: all .3s;
+}
+/*Fixed footer*/
+.social {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    text-align: center;
+    align-self: end;
+    padding-bottom: 25px;
+    color: #fff;
+    font-size: 2rem;
+}
+.social a {
+    color: inherit;
+}
+.social p {
+    font-size: 1rem;
 }
 /*Media Query responsive*/
 @media screen and (max-width: 1024px){
@@ -145,9 +166,15 @@ body {
         grid-column: 1;
         grid-row: 2;
     }
+    .text-front h2 {
+        font-size: 2rem;
+    }
     .front-btn {
         grid-column: 1;
         grid-row: 3;
+    }
+    .front-btn button{
+        font-size: 1.5rem;
     }
     /*ready page*/
     .readyone {
@@ -158,6 +185,16 @@ body {
     .play-btn {
         grid-column: 1;
         grid-row: 3;
+        font-size: 2rem;
+    }
+    /*Fixed footer*/
+    .social {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 1.5rem;
+    }
+    .social p{
+        font-size: 0.75rem;
     }
 }
 @media screen and (max-width: 375px){
