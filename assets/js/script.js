@@ -6,6 +6,13 @@ const startingText = document.getElementById('text-front');
 const readyOne = document.getElementById('readyone');
 const playBtn = document.getElementById('play-btn');
 const playBtnArea = document.getElementById('play-btn-area');
+const gameArea = document.getElementById('game-area');
+const question = document.getElementById('question');
+const choiceOne = document.getElementById('choiceOne');
+const choiceTwo = document.getElementById('choiceTwo');
+const choiceThree = document.getElementById('choiceThree');
+const choiceFour = document.getElementById('choiceFour');
+
 /**
  * Hide the starting page
  */
@@ -27,4 +34,10 @@ playBtnArea.addEventListener('click', startGame)
 function startGame(){
     readyOne.style.display = "none";
     playBtn.style.display = "none";
+    gameArea.style.display = "inline";
+    question.style.display = "inline";
+    choiceOne.style.display = "inline";
+    choiceTwo.style.display = "inline";
+    choiceThree.style.display = "inline";
+    choiceFour.style.display = "inline";
 }

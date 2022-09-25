@@ -110,6 +110,33 @@ body {
     transform: translateY(-5px);
     transition: all .3s;
 }
+/*Game area*/
+.game-area {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+    display: none;
+    height: auto;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+ .question-area {
+    color: #fff;
+    width: auto;
+ }
+.question-area h2 {
+    box-shadow: 0 10px 20px;
+    font-size: 2rem;
+}
+.answers {
+    display: grid;
+    margin-top: 3rem;
+    gap: 1rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
 /*Fixed footer*/
 .social {
     grid-column: 1 / span 2;
@@ -186,6 +213,18 @@ body {
         grid-column: 1;
         grid-row: 3;
         font-size: 2rem;
+    }
+    /*Game Area*/
+    .game-area {
+        margin: 0.5rem;
+        margin-top: 1rem;
+    }
+    .question-area h2 {
+        font-size: 1.5rem;
+    }
+    .answers {
+        gap: 0.5rem;
+        font-size: 1.5rem;
     }
     /*Fixed footer*/
     .social {
