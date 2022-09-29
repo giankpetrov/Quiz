@@ -121,17 +121,16 @@ choices.forEach(choice => {
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-
-
         selectedChoice.classList.add(classToApply)
 
         setTimeout(() => {
-            selectedChoice.classList.remove(classToApply)
             if(classToApply === 'correct'){
                 incrementScore(SCORE_POINTS)
             }
-            getNewQuestion()
-
+            setTimeout(() => {
+                selectedChoice.classList.remove(classToApply)
+                getNewQuestion()
+            }, 1000)
         }, 2500)
     })
 })
