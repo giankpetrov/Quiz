@@ -123,21 +123,26 @@ choices.forEach(choice => {
 
         selectedChoice.classList.add(classToApply)
 
+
         setTimeout(() => {
             if(classToApply === 'correct'){
                 incrementScore(SCORE_POINTS)
+                scoreText.classList.add('scored')
             }
+            //Later will remove class and get new question
             setTimeout(() => {
                 selectedChoice.classList.remove(classToApply)
+                scoreText.classList.remove('scored')
                 getNewQuestion()
             }, 1000)
-        }, 2500)
+        }, 2000)
     })
 })
 
 let incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
+
 }
 
 
