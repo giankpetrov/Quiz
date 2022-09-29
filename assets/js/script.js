@@ -8,13 +8,14 @@ const playBtnArea = document.getElementById('play-btn-area');
 const gameArea = document.getElementById('game-area');
 const questionArea = document.getElementById('question-area'); // question area class
 const questionElement = document.getElementById('question') // question text
-const answerOptions = document.getElementById('answer-box')
+const answerOptions = document.getElementById('answer-box')/*
 const choiceOne = document.getElementById('choiceOne');
 const choiceTwo = document.getElementById('choiceTwo');
 const choiceThree = document.getElementById('choiceThree');
-const choiceFour = document.getElementById('choiceFour');
+const choiceFour = document.getElementById('choiceFour');*/
 
-const choices = Array.from(document.querySelectorAll('.choice-text'));
+const choices = Array.from(document.querySelectorAll('.choice-text'));// Array of choices in HTML
+const scoreText = document.getElementById('score');
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -60,9 +61,9 @@ function startInstructions(){
     playBtn.style.display = "inline";
     readyOne.style.display = "inline";
 }
-// Initial button
+// Listen to 1st button to show instructions 
 startingBtn.addEventListener('click',startInstructions)
-// Play button
+// Listen to 2nd button to start the game
 playBtnArea.addEventListener('click', startGame)
 
 
@@ -82,6 +83,7 @@ function startGame(){
     choiceThree.style.display = "inline";
     choiceFour.style.display = "inline";
     questionCounter = 0
+    score = 0
     availableQuestions = [...questions]
     getNewQuestion()
 }
@@ -119,22 +121,24 @@ choices.forEach(choice => {
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-        if(classToApply === 'correct'){
-            incrementScore(SCORE_POINTS)
-        }
+
 
         selectedChoice.classList.add(classToApply)
 
         setTimeout(() => {
             selectedChoice.classList.remove(classToApply)
+            if(classToApply === 'correct'){
+                incrementScore(SCORE_POINTS)
+            }
             getNewQuestion()
 
-        }, 2000)
+        }, 2500)
     })
 })
 
 let incrementScore = num => {
     score +=num;
+    scoreText.innerText = score;
 }
 
 

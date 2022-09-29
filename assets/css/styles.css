@@ -122,6 +122,13 @@ body {
     margin-top: 2rem;
     width: 80%;
 }
+.score {
+    color: gold;
+    text-shadow: 2px 2px black;
+    width: auto;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+}
  .question-area {
     color: #fff;
     width: auto;
@@ -271,7 +278,6 @@ body {
     /*Game Area*/
     .game-area {
         margin: auto;
-        padding-top: 1rem;
         grid-column: 1;
         grid-row: 1 / span 2;
     }
