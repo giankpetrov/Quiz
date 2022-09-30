@@ -69,13 +69,12 @@ body {
 .readyone{
     grid-column: 1 / span 2;
     grid-row: 1;
-    text-align: left;
     align-self: center;
     transform: translateY(-0.5%);
     box-shadow: 0 10px 20px;
     color: #fff;
     height: 90%;
-    margin: 1rem;
+    margin: auto;
     padding: 1rem;
     font-size: 1.2rem;
     line-height: 1.3;
@@ -86,6 +85,7 @@ body {
     font-weight: bold;
     padding: 10px;
 }
+
 .play-btn{
     display: none;
     grid-column: 1 / span 2;
@@ -126,7 +126,7 @@ body {
     color: gold;
     text-shadow: 2px 2px black;
     width: auto;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     padding-bottom: 1rem;
 }
 .scored {
@@ -275,6 +275,7 @@ body {
         grid-column: 1;
         grid-row: 1 / span 2;
         font-size: 1rem;
+        margin: 1rem;
     }
     .play-btn {
         grid-column: 1;
@@ -292,7 +293,7 @@ body {
     }
     .answers {
         gap: 0.5rem;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .answers p {
         width: 10rem;

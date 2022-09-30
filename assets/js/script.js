@@ -129,13 +129,14 @@ choices.forEach(choice => {
                 incrementScore(SCORE_POINTS)
                 scoreText.classList.add('scored')
             }
+            
             //Later will remove class and get new question
             setTimeout(() => {
                 selectedChoice.classList.remove(classToApply)
                 scoreText.classList.remove('scored')
                 getNewQuestion()
             }, 1000)
-        }, 2000)
+        }, 1500)
     })
 })
 
