@@ -296,7 +296,7 @@ body {
         font-size: 1.5rem;
     }
     .answers p {
-        width: 10rem;
+        width: auto;
     }
     /*Fixed footer*/
     .social {
