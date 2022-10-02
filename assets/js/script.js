@@ -1,20 +1,27 @@
 
-const startingBtn = document.getElementById('front-btn-area');
-const startingImg = document.getElementById('front-img');
-const startingText = document.getElementById('text-front');
-const readyOne = document.getElementById('readyone');
-const playBtn = document.getElementById('play-btn');
-const playBtnArea = document.getElementById('play-btn-area');
-const gameArea = document.getElementById('game-area');
-const questionArea = document.getElementById('question-area'); // question area class
+const startingBtn = document.getElementById('front-btn-area')
+const leaderBoardBtn = document.getElementById('front-btn-leaderboard')
+const startingImg = document.getElementById('front-img')
+const startingText = document.getElementById('text-front')
+const readyOne = document.getElementById('readyone')
+const playBtn = document.getElementById('play-btn')
+const playBtnArea = document.getElementById('play-btn-area')
+const gameArea = document.getElementById('game-area')
+const questionArea = document.getElementById('question-area') // question area class
 const questionElement = document.getElementById('question') // question text
 const answerOptions = document.getElementById('answer-box')
-const endArea = document.getElementById('end-area');
-const finalScore = document.getElementById('finalScore');
-const playAgain = document.getElementById('playAgain');
+const endArea = document.getElementById('end-area')
+const username = document.getElementById('username')
+const saveScore = document.getElementById('saveScoreBtn')
+const finalScore = document.getElementById('finalScore')
+const playAgain = document.getElementById('playAgain')
+const choices = Array.from(document.querySelectorAll('.choice-text')) // Array of choices in HTML
+const scoreText = document.getElementById('score')
+const highScoresArea = document.getElementById('highScoresArea')
+const highScoresList = document.getElementById('highScoresList')
+const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+const MAX_HIGH_SCORES = 5
 
-const choices = Array.from(document.querySelectorAll('.choice-text'));// Array of choices in HTML
-const scoreText = document.getElementById('score');
 
 let currentQuestion = {}
 let acceptingAnswers = true
@@ -197,8 +204,18 @@ function startInstructions(){
     readyOne.style.display = "inline";
 }
 // Listen to 1st button to show instructions 
-startingBtn.addEventListener('click',startInstructions)
-// Listen to 2nd button to start the game
+startingBtn.addEventListener('click', startInstructions)
+//Listen to 2nd button to show leaderboard
+leaderBoardBtn.addEventListener('click', showHighScoresFromStart)
+
+function showHighScoresFromStart(){
+    startingImg.style.display = "none";
+    startingText.style.display = "none";
+    startingBtn.style.display = "none";
+    leaderBoardBtn.style.display = "none";
+    highScoresArea.style.display = "inline";
+}
+// Listen to 3rd button to start the game
 playBtnArea.addEventListener('click', startGame)
 
 
@@ -283,8 +300,56 @@ function startEndGame() {
     finalScore.innerText = localStorage.getItem('mostRecentScore');
 }
 
+username.addEventListener('keyup', () => {
+    saveScore.disabled = !username.value
+})
+
+saveHighScore = e => {
+    e.preventDefault()
+    
+    const score = {
+        score: localStorage.getItem('mostRecentScore'),
+        name: username.value
+    }
+
+    highScores.push(score)
+
+    highScores.sort((a,b) => {
+        return b.score - a.score
+    })
+
+    highScores.splice(5)
+
+    localStorage.setItem('highScores', JSON.stringify(highScores))
+    showHighScores()
+}
+
 function startGameAgain(){
     endArea.style.display = "none";
     finalScore.style.display = "none";
     startGame();
+}
+
+function showHighScores() {
+    endArea.style.display = "none";
+    finalScore.style.display = "none";
+    highScoresArea.style.display = "inline";
+}
+
+highScoresList.innerHTML =
+highScores.map(score => {
+    return `<li class="high-score-list">${score.name} - ${score.score}</li>`
+}).join('')
+
+function startGameFromLeaderboard() {
+    highScoresArea.style.display = "none";
+    startGame();
+}
+
+function backHome(){
+    highScoresArea.style.display = "none";
+    startingImg.style.display = "inline";
+    startingText.style.display = "inline";
+    startingBtn.style.display = "inline";
+    leaderBoardBtn.style.display = "inline";
 }

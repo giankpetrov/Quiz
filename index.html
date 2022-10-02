@@ -22,6 +22,8 @@
         </div>
         <div id="front-btn" class="front-btn">
             <button id="front-btn-area">Start</button>
+            <br>
+            <button id="front-btn-leaderboard">Leaderboard</button>
         </div>
         <!------------------Intructions page-------------------->
         <div id="readyone" class="readyone">
@@ -58,13 +60,20 @@
             <h1 id="finalScore" class="final-score">0</h1>
             <form class="end-form">
                 <h2 id="end-text"></h2>
-                <input type="text" name="name" id="username" placeholder="Enter your name" class="form-name" maxlength="10">
+                <input type="text" name="name" id="username" placeholder="Enter your name" class="form-name" minlength="3" maxlength="10">
                 <br>
-                <button class="end-btn" onclick="saveHighScore(event)" disabled>Save</button>
+                <button id="saveScoreBtn" class="end-btn" onclick="saveHighScore(event)" disabled>Save</button>
             </form>
-            <div id="" >
+            <div>
                 <button id="PlayAgain" class="end-btn" onclick="startGameAgain()">Play again</button>
             </div>
+        </div>
+    <!-------------------------High Scores---------------------->
+        <div id="highScoresArea" class="high-scores-area">
+            <h1>Leaderboard</h1>
+            <ul id="highScoresList"></ul>
+            <button id="PlayAgain" class="end-btn" onclick="startGameFromLeaderboard()">Play again</button>
+            <button class="end-btn" onclick="backHome()">Back Home</button>
         </div>
     <!-------------------------Fixed footer--------------------->
         <div class="social">
