@@ -8,11 +8,10 @@ const playBtnArea = document.getElementById('play-btn-area');
 const gameArea = document.getElementById('game-area');
 const questionArea = document.getElementById('question-area'); // question area class
 const questionElement = document.getElementById('question') // question text
-const answerOptions = document.getElementById('answer-box')/*
-const choiceOne = document.getElementById('choiceOne');
-const choiceTwo = document.getElementById('choiceTwo');
-const choiceThree = document.getElementById('choiceThree');
-const choiceFour = document.getElementById('choiceFour');*/
+const answerOptions = document.getElementById('answer-box')
+const endArea = document.getElementById('end-area');
+const finalScore = document.getElementById('finalScore');
+const playAgain = document.getElementById('playAgain');
 
 const choices = Array.from(document.querySelectorAll('.choice-text'));// Array of choices in HTML
 const scoreText = document.getElementById('score');
@@ -21,7 +20,7 @@ let currentQuestion = {}
 let acceptingAnswers = true
 let questionCounter = 0
 let availableQuestions = []
-let score= 0
+let score = 0
 
 
 const questions = [
@@ -204,7 +203,7 @@ playBtnArea.addEventListener('click', startGame)
 
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 10
+const MAX_QUESTIONS = 1
 
 /**
  * Hide the instructions and start the game
@@ -213,11 +212,7 @@ function startGame(){
     readyOne.style.display = "none";
     playBtn.style.display = "none";
     gameArea.style.display = "inline";
-    questionArea.style.display = "inline";
-    choiceOne.style.display = "inline";
-    choiceTwo.style.display = "inline";
-    choiceThree.style.display = "inline";
-    choiceFour.style.display = "inline";
+    scoreText.innerText = 0;
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
@@ -225,10 +220,10 @@ function startGame(){
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter === MAX_QUESTIONS) {
-        localStorage.setItem('mostRecenScore', score)
+    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html')
+        return startEndGame();
     }
     
     questionCounter++
@@ -279,7 +274,17 @@ choices.forEach(choice => {
 let incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
-
 }
 
+function startEndGame() {
+    gameArea.style.display = "none";
+    endArea.style.display = "inline";
+    finalScore.style.display = "inline";
+    finalScore.innerText = localStorage.getItem('mostRecentScore');
+}
 
+function startGameAgain(){
+    endArea.style.display = "none";
+    finalScore.style.display = "none";
+    startGame();
+}

@@ -204,6 +204,50 @@ body {
       background: red;
     }
 }
+/*End Area*/
+.end-area{
+    display: none;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 10px 20px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    text-align: center;
+}
+.final-score {
+    display: none;
+    color: gold;
+    text-shadow: 2px 2px black;
+    width: auto;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+.form-name {
+    margin: 0.5rem;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 20px;
+    border: 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.end-btn {
+    margin: 0.5rem;
+    height: 3rem;
+    width: 10rem;
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.end-btn:hover{
+    background-color: orange;
+    box-shadow: 0 10px 20px;
+    transform: translateY(-5px);
+    transition: all .3s;
+}
 /*Fixed footer*/
 .social {
     grid-column: 1 / span 2;
@@ -297,6 +341,11 @@ body {
     }
     .answers p {
         width: auto;
+    }
+    /*End Area*/
+    .end-area{
+        grid-column: 1;
+        grid-row: 1 / span 3;
     }
     /*Fixed footer*/
     .social {
