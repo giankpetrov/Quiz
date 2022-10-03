@@ -64,6 +64,7 @@ body {
     box-shadow: 0 10px 20px;
     transform: translateY(-5px);
     transition: all .3s;
+    cursor: pointer;
 }
 /*Instruction page*/
 .readyone{
@@ -108,6 +109,7 @@ body {
     box-shadow: 0 10px 20px;
     transform: translateY(-5px);
     transition: all .3s;
+    cursor: pointer;
 }
 /*Game area*/
 .game-area {
@@ -162,6 +164,7 @@ body {
     color: black;
     background-color: orange;
     width: auto;
+    cursor: pointer;
 }
 .extra-info {
     display: none;
@@ -188,6 +191,7 @@ body {
     box-shadow: 0 10px 20px;
     transform: translateY(-5px);
     transition: all .3s;
+    cursor: pointer;
 }
 .correct {
     animation: correct 1.5s linear;
@@ -270,6 +274,7 @@ body {
     box-shadow: 0 10px 20px;
     transform: translateY(-5px);
     transition: all .3s;
+    cursor: pointer;
 }
 /*High Scores*/
 .high-scores-area{
@@ -370,7 +375,6 @@ body {
     }
     /*Game Area*/
     .game-area {
-        margin: auto;
         grid-column: 1;
         grid-row: 1 / span 2;
     }
