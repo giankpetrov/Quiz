@@ -95,7 +95,7 @@ const questions = [
     choice3: '18',
     choice4: '16',
     answer: 1,
-    extra: 'Norman Whiteside from Northern Ireland debuted with 17 years and 40 days old in 1982'   
+    extra: 'Norman Whiteside with 17 years and 40 days old debuted in 1982'   
     },
     {
     question: 'How fast was the fastest ever FIFA World Cup goal?',
@@ -238,13 +238,17 @@ function showHighScoresFromStart(){
     startingBtn.style.display = "none";
     leaderBoardBtn.style.display = "none";
     highScoresArea.style.display = "inline";
+    highScoresList.innerHTML =
+    highScores.map(score => {
+    return `<li class="high-score-list">${score.name} - ${score.score}</li>`
+    }).join('')
 }
 // Listen to 3rd button to start the game
 playBtnArea.addEventListener('click', startGame)
 
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 2
+const MAX_QUESTIONS = 3
 
 /**
  * Hide the instructions and start the game
@@ -357,7 +361,7 @@ saveHighScore = e => {
     showHighScores()
 }
 
-function startGameAgain(){
+function startGameAgain() {
     endArea.style.display = "none";
     finalScore.style.display = "none";
     startGame();
@@ -367,16 +371,21 @@ function showHighScores() {
     endArea.style.display = "none";
     finalScore.style.display = "none";
     highScoresArea.style.display = "inline";
+    highScoresList.innerHTML =
+    highScores.map(score => {
+    return `<li class="high-score-list">${score.name} - ${score.score}</li>`
+    }).join('')
 }
-
+/*
 highScoresList.innerHTML =
 highScores.map(score => {
     return `<li class="high-score-list">${score.name} - ${score.score}</li>`
-}).join('')
+}).join('')*/
 
 function startGameFromLeaderboard() {
     highScoresArea.style.display = "none";
-    startGame();
+    playBtn.style.display = "inline";
+    readyOne.style.display = "inline";
 }
 
 function backHome(){
