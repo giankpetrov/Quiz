@@ -376,11 +376,6 @@ function showHighScores() {
     return `<li class="high-score-list">${score.name} - ${score.score}</li>`
     }).join('')
 }
-/*
-highScoresList.innerHTML =
-highScores.map(score => {
-    return `<li class="high-score-list">${score.name} - ${score.score}</li>`
-}).join('')*/
 
 function startGameFromLeaderboard() {
     highScoresArea.style.display = "none";
