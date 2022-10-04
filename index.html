@@ -43,6 +43,7 @@
         <!-------------------Game Area-------------------------->
         <div id="game-area" class="game-area">
             <div>
+                <h2 id="score-game" class="score">YOUR SCORE</h2>
                 <h2 id="score" class="score">0</h2>
             </div>
             <div id="question-area" class="question-area">
@@ -58,9 +59,11 @@
                 <p id="info-text" class="info-text" data-number="5">This is extra info from question</p>
             </div>
             <div>
-                <button id="next-question-btn" class="next-question-btn" onclick="nextQuestionPlease()">Next</button>
+                
             </div>
         </div>
+        <button id="back-home-btn" class="back-home-btn" onclick="backHomePlease()">&laquo; Home</button>
+        <button id="next-question-btn" class="next-question-btn" onclick="nextQuestionPlease()">Next &raquo;</button>
     <!------------------------End Page-------------------------->
         <div id="end-area" class="end-area">
             <h1 id="finalScore" class="final-score">0</h1>

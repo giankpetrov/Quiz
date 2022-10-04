@@ -179,4 +179,4 @@ const questions = [
     answer: 4,   
     extra: 'Spain is "The Red Fury" for the strong and physical way of playing'
     },
-]
+];

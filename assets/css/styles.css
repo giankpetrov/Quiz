@@ -168,6 +168,7 @@ body {
 }
 .extra-info {
     display: none;
+    opacity: 0.0;
 }
 .extra-info p{
     color: gold;
@@ -175,9 +176,31 @@ body {
     margin: 0.5rem; 
     font-size: 1.5rem;
 }
+.back-home-btn{
+    display: none;
+    grid-column: 1;
+    grid-row: 2;
+    height: 3rem;
+    width: 10rem;
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase; 
+    place-self: center;
+    margin-bottom: 3rem;
+}
+.back-home-btn:hover{
+    background-color: orange;
+    box-shadow: 0 10px 20px;
+    transform: translateY(-5px);
+    transition: all .3s;
+    cursor: pointer;
+}
 .next-question-btn{
     display: none;
-    margin: 1rem;
+    grid-column: 2;
+    grid-row: 2;
     height: 3rem;
     width: 10rem;
     background-color: #fff;
@@ -185,6 +208,8 @@ body {
     border-radius: 20px;
     font-size: 1.5rem;
     text-transform: uppercase;
+    place-self: center;
+    margin-bottom: 3rem;
 }
 .next-question-btn:hover{
     background-color: orange;

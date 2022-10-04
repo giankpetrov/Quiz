@@ -10,7 +10,8 @@ const questionArea = document.getElementById('question-area')
 const questionElement = document.getElementById('question') 
 const answerOptions = document.getElementById('answer-box') 
 const choices = Array.from(document.querySelectorAll('.choice-text')) 
-const extraInfo = document.getElementById('extraInfo') 
+const extraInfo = document.getElementById('extraInfo')
+const backHomeBtn = document.getElementById('back-home-btn') 
 const nextQuestionBtn = document.getElementById('next-question-btn') 
 const infoText = document.getElementById('info-text')
 const endArea = document.getElementById('end-area')
@@ -72,7 +73,8 @@ function startGame(){
     readyOne.style.display = "none";
     playBtn.style.display = "none";
     gameArea.style.display = "inline";
-    extraInfo.style.display = "none";
+    extraInfo.style.display = "inline";
+    backHomeBtn.style.display = "inline";
     scoreText.innerText = 0;
     questionCounter = 0
     score = 0
@@ -123,7 +125,7 @@ choices.forEach(choice => {
                 scoreText.classList.add('scored')
             }
             setTimeout(() =>{
-                extraInfo.style.display = "inline"
+                extraInfo.style.opacity = "1.0"
             },1000 )
             setTimeout(() => {
                 nextQuestionBtn.style.display = "inline"
@@ -134,10 +136,21 @@ choices.forEach(choice => {
                     nextQuestionBtn.style.display = "none"
                     getNewQuestion()
                 }
-            }, 4000)
+            }, 3000)
         }, 1500)
     })
 })
+
+function backHomePlease() {
+    startingImg.style.display = "inline";
+    startingText.style.display = "inline";
+    startingBtn.style.display = "inline";
+    leaderBoardBtn.style.display = "inline";
+    gameArea.style.display = "none";
+    extraInfo.style.display = "none";
+    backHomeBtn.style.display = "none";
+    nextQuestionBtn.style.display = "none";
+}
 
 let incrementScore = num => {
     score +=num;
