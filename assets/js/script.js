@@ -1,13 +1,12 @@
-const startingBtn = document.getElementById('front-btn-area') 
-const leaderBoardBtn = document.getElementById('front-btn-leaderboard') 
+const startBtn = document.getElementById('start-btn') 
+const leaderBoardBtn = document.getElementById('leaderboard-btn') 
 const startingImg = document.getElementById('front-img') 
-const startingText = document.getElementById('text-front') 
-const readyOne = document.getElementById('readyone') 
-const playBtn = document.getElementById('play-btn') 
-const playBtnArea = document.getElementById('play-btn-area')
+const frontTitle = document.getElementById('front-title') 
+const instructions = document.getElementById('instructions') 
+const instructionsBtns = document.getElementById('instructions-btns') 
 const gameArea = document.getElementById('game-area') 
 const questionArea = document.getElementById('question-area') 
-const questionElement = document.getElementById('question') 
+const questionText = document.getElementById('question-text') 
 const answerOptions = document.getElementById('answer-box') 
 const choices = Array.from(document.querySelectorAll('.choice-text')) 
 const extraInfo = document.getElementById('extraInfo')
@@ -18,7 +17,6 @@ const endArea = document.getElementById('end-area')
 const username = document.getElementById('username')
 const saveScore = document.getElementById('saveScoreBtn') 
 const finalScore = document.getElementById('finalScore') 
-const playAgain = document.getElementById('playAgain') 
 const scoreText = document.getElementById('score')
 const highScoresArea = document.getElementById('highScoresArea') 
 const highScoresList = document.getElementById('highScoresList') 
@@ -31,17 +29,17 @@ let questionCounter = 0
 let availableQuestions = []  
 let score = 0                   
 
-startingBtn.addEventListener('click', startInstructions)
+startBtn.addEventListener('click', startInstructions)
 /**
  * Bring Instruction Section
  */
 function startInstructions(){
     startingImg.style.display = "none";
-    startingText.style.display = "none";
-    startingBtn.style.display = "none";
+    frontTitle.style.display = "none";
+    startBtn.style.display = "none";
     leaderBoardBtn.style.display = "none";
-    playBtn.style.display = "inline";
-    readyOne.style.display = "inline";
+    instructionsBtns.style.display = "inline";
+    instructions.style.display = "inline";
 }
 
 leaderBoardBtn.addEventListener('click', showHighScoresFromStart)
@@ -50,8 +48,8 @@ leaderBoardBtn.addEventListener('click', showHighScoresFromStart)
  */
 function showHighScoresFromStart(){
     startingImg.style.display = "none";
-    startingText.style.display = "none";
-    startingBtn.style.display = "none";
+    frontTitle.style.display = "none";
+    startBtn.style.display = "none";
     leaderBoardBtn.style.display = "none";
     highScoresArea.style.display = "inline";
     highScoresList.innerHTML =
@@ -60,15 +58,12 @@ function showHighScoresFromStart(){
     }).join('')
 }
 
-playBtnArea.addEventListener('click', startGame)
-
-
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 1         
 
 function startGame(){
-    readyOne.style.display = "none";
-    playBtn.style.display = "none";
+    instructions.style.display = "none";
+    instructionsBtns.style.display = "none";
     gameArea.style.display = "inline";
     extraInfo.style.display = "inline";
     extraInfo.style.opacity = "0.0"
@@ -92,7 +87,7 @@ getNewQuestion = () => {
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
-    questionElement.innerText = currentQuestion.question
+    questionText.innerText = currentQuestion.question
     //This will asign the choices text from current question
     choices.forEach(choice => {
         const number = choice.dataset['number']
@@ -138,18 +133,21 @@ choices.forEach(choice => {
         }, 1500)
     })
 })
-
+/**
+ * Bring you back home from any page
+ */
 function backHomePlease() {
     startingImg.style.display = "inline";
-    startingText.style.display = "inline";
-    startingBtn.style.display = "inline";
+    frontTitle.style.display = "inline";
+    startBtn.style.display = "inline";
     leaderBoardBtn.style.display = "inline";
     gameArea.style.display = "none";
     extraInfo.style.display = "none";
     backHomeBtn.style.display = "none";
     nextQuestionBtn.style.display = "none";
-    readyOne.style.display = "none";
-    playBtn.style.display = "none";
+    instructions.style.display = "none";
+    instructionsBtns.style.display = "none";
+    highScoresArea.style.display = "none";
 }
 
 let incrementScore = num => {
@@ -219,16 +217,6 @@ function showHighScores() {
  */
 function startGameFromLeaderboard() {
     highScoresArea.style.display = "none";
-    playBtn.style.display = "inline";
-    readyOne.style.display = "inline";
-}
-/**
- * Return home from High Scores section
- */
-function backHome(){
-    highScoresArea.style.display = "none";
-    startingImg.style.display = "inline";
-    startingText.style.display = "inline";
-    startingBtn.style.display = "inline";
-    leaderBoardBtn.style.display = "inline";
+    instructionsBtns.style.display = "inline";
+    instructions.style.display = "inline";
 }

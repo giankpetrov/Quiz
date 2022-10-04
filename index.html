@@ -17,16 +17,16 @@
         <div id="front-img" class="front-img">
             <img src="/assets/images/frontpage.webp">
         </div>
-        <div id="text-front" class="text-front">
+        <div id="front-title" class="front-title">
             <h2>World Cup Quiz</h2>
         </div>
         <div id="front-btn" class="front-btn">
-            <button id="front-btn-area">Start</button>
+            <button id="start-btn">Start</button>
             <br>
-            <button id="front-btn-leaderboard">Leaderboard</button>
+            <button id="leaderboard-btn">Leaderboard</button>
         </div>
         <!------------------Intructions page-------------------->
-        <div id="readyone" class="readyone">
+        <div id="instructions" class="instructions">
             <ul>
                 <h2>INSTRUCTIONS</h2>
                 <li>Select the answer you think is correct.</li>
@@ -37,18 +37,18 @@
                 <h2>Good Luck!</h2>
             </ul>
         </div>
-        <div id="play-btn" class="play-btn">
-            <button id="back-from-Instructions" onclick="backHomePlease()">&laquo; Home</button>
-            <button id="play-btn-area">Play</button>
+        <div id="instructions-btns" class="instructions-btns">
+            <button onclick="backHomePlease()">&laquo; Home</button>
+            <button onclick="startGame()">Play</button>
         </div>
         <!-------------------Game Area-------------------------->
         <div id="game-area" class="game-area">
             <div>
-                <h2 id="score-game" class="score">YOUR SCORE</h2>
+                <h2 class="score">YOUR SCORE</h2>
                 <h2 id="score" class="score">0</h2>
             </div>
             <div id="question-area" class="question-area">
-                <h2 id="question">Question 1</h2>
+                <h2 id="question-text">Question 1</h2>
             </div>
             <div id="answers-box" class="answers">
                 <p id="choiceOne" class="choice-text" data-number="1">Choice1</p>
@@ -75,15 +75,15 @@
                 <button id="saveScoreBtn" class="end-btn" onclick="saveHighScore(event)" disabled>Save</button>
             </form>
             <div>
-                <button id="PlayAgain" class="end-btn" onclick="startGameAgain()">Play again</button>
+                <button class="end-btn" onclick="startGameAgain()">Play again</button>
             </div>
         </div>
     <!-------------------------High Scores---------------------->
         <div id="highScoresArea" class="high-scores-area">
             <h1>Leaderboard</h1>
             <ul id="highScoresList"></ul>
-            <button id="PlayAgain" class="end-btn" onclick="startGameFromLeaderboard()">Play again</button>
-            <button class="end-btn" onclick="backHome()">Back Home</button>
+            <button class="end-btn" onclick="startGameFromLeaderboard()">Play again</button>
+            <button class="end-btn" onclick="backHomePlease()">Back Home</button>
         </div>
     <!-------------------------Fixed footer--------------------->
         <div class="social">
@@ -94,7 +94,7 @@
     </div>
     <!------------------------Font Awesome Script--------------->
     <script src="https://kit.fontawesome.com/0c9bf02fd8.js" crossorigin="anonymous"></script>
-    <!----------------- Script---------------------------------->
+    <!----------------- Scripts--------------------------------->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
 </body>
