@@ -31,9 +31,6 @@ let questionCounter = 0
 let availableQuestions = []  
 let score = 0                   
 
-
-
-
 startingBtn.addEventListener('click', startInstructions)
 /**
  * Bring Instruction Section
@@ -67,13 +64,14 @@ playBtnArea.addEventListener('click', startGame)
 
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 3         
+const MAX_QUESTIONS = 1         
 
 function startGame(){
     readyOne.style.display = "none";
     playBtn.style.display = "none";
     gameArea.style.display = "inline";
     extraInfo.style.display = "inline";
+    extraInfo.style.opacity = "0.0"
     backHomeBtn.style.display = "inline";
     scoreText.innerText = 0;
     questionCounter = 0
@@ -162,9 +160,11 @@ let incrementScore = num => {
  */
 function startEndGame() {
     gameArea.style.display = "none";
+    backHomeBtn.style.display = "none";
     endArea.style.display = "inline";
     finalScore.style.display = "inline";
     finalScore.innerText = localStorage.getItem('mostRecentScore');
+    username.value = '';
 }
  
 username.addEventListener('keyup', () => {
@@ -197,6 +197,7 @@ saveHighScore = e => {
 function startGameAgain() {
     endArea.style.display = "none";
     finalScore.style.display = "none";
+
     startGame();
 }
 /**
