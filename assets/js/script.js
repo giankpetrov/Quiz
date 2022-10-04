@@ -148,6 +148,8 @@ function backHomePlease() {
     extraInfo.style.display = "none";
     backHomeBtn.style.display = "none";
     nextQuestionBtn.style.display = "none";
+    readyOne.style.display = "none";
+    playBtn.style.display = "none";
 }
 
 let incrementScore = num => {
