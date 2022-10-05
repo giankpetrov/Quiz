@@ -1,33 +1,33 @@
-const startBtn = document.getElementById('start-btn') 
-const leaderBoardBtn = document.getElementById('leaderboard-btn') 
-const startingImg = document.getElementById('front-img') 
-const frontTitle = document.getElementById('front-title') 
-const instructions = document.getElementById('instructions') 
-const instructionsBtns = document.getElementById('instructions-btns') 
-const gameArea = document.getElementById('game-area') 
-const questionArea = document.getElementById('question-area') 
-const questionText = document.getElementById('question-text') 
-const answerOptions = document.getElementById('answer-box') 
-const choices = Array.from(document.querySelectorAll('.choice-text')) 
-const extraInfo = document.getElementById('extraInfo')
-const backHomeBtn = document.getElementById('back-home-btn') 
-const nextQuestionBtn = document.getElementById('next-question-btn') 
-const infoText = document.getElementById('info-text')
-const endArea = document.getElementById('end-area')
-const username = document.getElementById('username')
-const saveScore = document.getElementById('saveScoreBtn') 
-const finalScore = document.getElementById('finalScore') 
-const scoreText = document.getElementById('score')
-const highScoresArea = document.getElementById('highScoresArea') 
-const highScoresList = document.getElementById('highScoresList') 
-const highScores = JSON.parse(localStorage.getItem('highScores')) || []
-const MAX_HIGH_SCORES = 5 
+const startBtn = document.getElementById('start-btn');
+const leaderBoardBtn = document.getElementById('leaderboard-btn');
+const startingImg = document.getElementById('front-img');
+const frontTitle = document.getElementById('front-title');
+const instructions = document.getElementById('instructions');
+const instructionsBtns = document.getElementById('instructions-btns');
+const gameArea = document.getElementById('game-area');
+const questionArea = document.getElementById('question-area');
+const questionText = document.getElementById('question-text');
+const answerOptions = document.getElementById('answer-box');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
+const extraInfo = document.getElementById('extraInfo');
+const backHomeBtn = document.getElementById('back-home-btn');
+const nextQuestionBtn = document.getElementById('next-question-btn');
+const infoText = document.getElementById('info-text');
+const endArea = document.getElementById('end-area');
+const username = document.getElementById('username');
+const saveScore = document.getElementById('saveScoreBtn');
+const finalScore = document.getElementById('finalScore');
+const scoreText = document.getElementById('score');
+const highScoresArea = document.getElementById('highScoresArea');
+const highScoresList = document.getElementById('highScoresList');
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+const MAX_HIGH_SCORES = 5;
 
-let currentQuestion = {}        
-let acceptingAnswers = true     
-let questionCounter = 0         
-let availableQuestions = []  
-let score = 0                   
+let currentQuestion = {};    
+let acceptingAnswers = true;
+let questionCounter = 0;    
+let availableQuestions = [];  
+let score = 0;       
 
 startBtn.addEventListener('click', startInstructions)
 /**
@@ -167,8 +167,8 @@ function startEndGame() {
     username.value = '';
 }
  
-username.addEventListener('keyup', () => {
-    saveScore.disabled = !username.value
+username.addEventListener('input', () => {
+    saveScore.disabled = username.value.length < 3;
 })
 
 saveHighScore = e => {
