@@ -168,6 +168,7 @@ function startEndGame() {
 }
  
 username.addEventListener('input', () => {
+    username.value = username.value ? username.value.trimStart():'';
     saveScore.disabled = username.value.length < 3;
 })
 
