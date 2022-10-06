@@ -258,7 +258,7 @@ body {
 /*End Area*/
 .end-area{
     display: none;
-    margin: auto;
+    margin: auto 10rem;
     padding: 1rem;
     color: #fff;
     box-shadow: 0 10px 20px;
@@ -267,17 +267,17 @@ body {
     text-align: center;
 }
 .final-score {
-    display: none;
     color: gold;
     text-shadow: 2px 2px black;
     width: auto;
     font-size: 2.5rem;
     padding-bottom: 1rem;
+    text-transform: uppercase;
 }
 .form-name {
     margin: 0.5rem;
     height: 3rem;
-    width: 10rem;
+    width: 12rem;
     border-radius: 20px;
     border: 0;
     font-size: 1.3rem;
@@ -286,7 +286,7 @@ body {
 .end-btn {
     margin: 0.5rem;
     height: 3rem;
-    width: 10rem;
+    width: 12rem;
     background-color: #fff;
     border: 0;
     border-radius: 20px;

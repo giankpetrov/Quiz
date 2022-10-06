@@ -162,7 +162,7 @@ function startEndGame() {
     gameArea.style.display = "none";
     backHomeBtn.style.display = "none";
     endArea.style.display = "inline";
-    finalScore.style.display = "inline";
+    /*finalScore.style.display = "inline";*/
     finalScore.innerText = localStorage.getItem('mostRecentScore');
     username.value = '';
 }
@@ -197,7 +197,7 @@ saveHighScore = e => {
  */
 function startGameAgain() {
     endArea.style.display = "none";
-    finalScore.style.display = "none";
+    /*finalScore.style.display = "none";*/
 
     startGame();
 }
@@ -206,7 +206,7 @@ function startGameAgain() {
  */
 function showHighScores() {
     endArea.style.display = "none";
-    finalScore.style.display = "none";
+    /*finalScore.style.display = "none";*/
     highScoresArea.style.display = "inline";
     highScoresList.innerHTML =
     highScores.map(score => {
