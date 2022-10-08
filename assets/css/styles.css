@@ -408,11 +408,20 @@ body {
         grid-row: 1 / span 2;
         font-size: 1rem;
         margin: 1rem;
+        font-size: 1.2rem;
+        height: 80%;
+    }
+    .instructions h2 {
+        padding: 0.5rem;
     }
     .instructions-btns {
         grid-column: 1;
         grid-row: 3;
-        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    .instructions-btns button {
+        margin: 0 1rem;
+        width: 8rem;
     }
     /*Game Area*/
     .game-area {
@@ -421,11 +430,11 @@ body {
         width: 90%;
         margin-top: 2rem;
     }
+    .score {
+        font-size: 2.2rem;
+    }
     .question-area h2 {
         font-size: 1.5rem;
-    }
-    .score {
-        font-size: 2.5rem;
     }
     .answers {
         gap: 1rem;
@@ -437,14 +446,23 @@ body {
     .extra-info p {
         font-size: 1.5rem;
     }
+    .back-home-btn {
+        grid-column: 1;
+        grid-row: 3;
+        width: 8rem;
+        margin-right: 10rem;
+    }
     .next-question-btn{
-        width: 10rem;
-        font-size: 1.50rem;
+        grid-column: 1;
+        grid-row: 3;
+        width: 8rem;
+        margin-left: 10rem;
     }
     /*End Area*/
     .end-area{
         grid-column: 1;
         grid-row: 1 / span 3;
+        margin: auto;
     }
     /*High Score Area*/
     .high-scores-area {
@@ -452,6 +470,10 @@ body {
         grid-row: 1 / span 2;
         margin: 2rem;
         padding: 2rem;
+    }
+    .end-btn {
+        height: 2rem;
+        width: 10rem;
     }
     /*Fixed footer*/
     .social {
