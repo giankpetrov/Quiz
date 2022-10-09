@@ -59,7 +59,7 @@ function showHighScoresFromStart(){
 }
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 1         
+const MAX_QUESTIONS = 2         
 
 function startGame(){
     instructions.style.display = "none";
@@ -82,20 +82,20 @@ getNewQuestion = () => {
 
         return startEndGame();
     }
-    // Add +1 to question counter
+    
     questionCounter++
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     questionText.innerText = currentQuestion.question
-    //This will asign the choices text from current question
+    
     choices.forEach(choice => {
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice'+ number]
     })
-    // Assign extra text to from array
+   
     infoText.innerText = currentQuestion['extra']
-    // This will delete the current question from the question array
+    
     availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
@@ -106,6 +106,9 @@ choices.forEach(choice => {
         if(!acceptingAnswers) return;
 
         acceptingAnswers = false;
+
+        backHomeBtn.setAttribute('disabled','');
+
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
@@ -118,7 +121,7 @@ choices.forEach(choice => {
                 scoreText.classList.add('scored')
             }
             setTimeout(() =>{
-                extraInfo.style.opacity = "1.0"
+                extraInfo.style.opacity = "1.0";
             },1000 )
             setTimeout(() => {
                 nextQuestionBtn.style.display = "inline"
@@ -127,9 +130,10 @@ choices.forEach(choice => {
                     scoreText.classList.remove('scored')
                     extraInfo.style.display = "none"
                     nextQuestionBtn.style.display = "none"
+                    backHomeBtn.removeAttribute('disabled');
                     getNewQuestion()
                 }
-            }, 3000)
+            }, 2500)
         }, 1500)
     })
 })
@@ -162,7 +166,6 @@ function startEndGame() {
     gameArea.style.display = "none";
     backHomeBtn.style.display = "none";
     endArea.style.display = "inline";
-    /*finalScore.style.display = "inline";*/
     finalScore.innerText = localStorage.getItem('mostRecentScore');
     username.value = '';
 }
