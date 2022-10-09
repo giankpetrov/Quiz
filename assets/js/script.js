@@ -4,10 +4,10 @@ const startingImg = document.getElementById('front-img');
 const frontTitle = document.getElementById('front-title');
 const instructions = document.getElementById('instructions');
 const instructionsBtns = document.getElementById('instructions-btns');
+const backFromInstructions = document.getElementById('backFromInstructions');
+const playBtn = document.getElementById('play');
 const gameArea = document.getElementById('game-area');
-const questionArea = document.getElementById('question-area');
 const questionText = document.getElementById('question-text');
-const answerOptions = document.getElementById('answer-box');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const extraInfo = document.getElementById('extraInfo');
 const backHomeBtn = document.getElementById('back-home-btn');
@@ -18,6 +18,7 @@ const username = document.getElementById('username');
 const saveScore = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const scoreText = document.getElementById('score');
+const startGameAgainBtn = document.getElementById('startGameAgain');
 const highScoresArea = document.getElementById('highScoresArea');
 const highScoresList = document.getElementById('highScoresList');
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
@@ -29,7 +30,7 @@ let questionCounter = 0;
 let availableQuestions = [];  
 let score = 0;       
 
-startBtn.addEventListener('click', startInstructions)
+startBtn.addEventListener('click', startInstructions);
 /**
  * Bring Instruction Section
  */
@@ -38,11 +39,12 @@ function startInstructions(){
     frontTitle.style.display = "none";
     startBtn.style.display = "none";
     leaderBoardBtn.style.display = "none";
+    highScoresArea.style.display = "none";
     instructionsBtns.style.display = "inline";
     instructions.style.display = "inline";
 }
 
-leaderBoardBtn.addEventListener('click', showHighScoresFromStart)
+leaderBoardBtn.addEventListener('click', showHighScoresFromStart);
 /**
  * Bring High Scores Section 
  */
@@ -54,52 +56,53 @@ function showHighScoresFromStart(){
     highScoresArea.style.display = "inline";
     highScoresList.innerHTML =
     highScores.map(score => {
-    return `<li class="high-score-list">${score.name} - ${score.score}</li>`
-    }).join('')
+    return `<li class="high-score-list">${score.name} - ${score.score}</li>`;
+    }).join('');
 }
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 2         
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 3;         
+
+playBtn.addEventListener('click', startGame);
 
 function startGame(){
     instructions.style.display = "none";
     instructionsBtns.style.display = "none";
     gameArea.style.display = "inline";
     extraInfo.style.display = "inline";
-    extraInfo.style.opacity = "0.0"
+    extraInfo.style.opacity = "0.0";
     backHomeBtn.style.display = "inline";
     scoreText.innerText = 0;
-    questionCounter = 0
-    score = 0
-    availableQuestions = [...questions]
-    getNewQuestion()
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    getNewQuestion();
 }
 
-
-getNewQuestion = () => {
+const getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
+        localStorage.setItem('mostRecentScore', score);
 
         return startEndGame();
     }
     
-    questionCounter++
+    questionCounter++;
     
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionsIndex]
-    questionText.innerText = currentQuestion.question
-    
-    choices.forEach(choice => {
-        const number = choice.dataset['number']
-        choice.innerText = currentQuestion['choice'+ number]
-    })
-   
-    infoText.innerText = currentQuestion['extra']
-    
-    availableQuestions.splice(questionsIndex, 1)
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionsIndex];
+    questionText.innerText = currentQuestion.question;
 
-    acceptingAnswers = true
-}
+    choices.forEach(choice => {
+        const number = choice.dataset.number;
+        choice.innerText = currentQuestion['choice'+ number];
+    });
+   
+    infoText.innerText = currentQuestion.extra;
+    
+    availableQuestions.splice(questionsIndex, 1);
+
+    acceptingAnswers = true;
+};
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -110,33 +113,34 @@ choices.forEach(choice => {
         backHomeBtn.setAttribute('disabled','');
 
         const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
+        const selectedAnswer = selectedChoice.dataset.number;
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-        selectedChoice.classList.add(classToApply)
+        selectedChoice.classList.add(classToApply);
 
         setTimeout(() => {
             if(classToApply === 'correct'){
-                incrementScore(SCORE_POINTS)
-                scoreText.classList.add('scored')
+                incrementScore(SCORE_POINTS);
+                scoreText.classList.add('scored');
             }
             setTimeout(() =>{
                 extraInfo.style.opacity = "1.0";
-            },1000 )
+            },1000 );
             setTimeout(() => {
-                nextQuestionBtn.style.display = "inline"
+                nextQuestionBtn.style.display = "inline";
                 nextQuestionPlease = e => {
-                    selectedChoice.classList.remove(classToApply)
-                    scoreText.classList.remove('scored')
-                    extraInfo.style.display = "none"
-                    nextQuestionBtn.style.display = "none"
+                    selectedChoice.classList.remove(classToApply);
+                    scoreText.classList.remove('scored');
+                    extraInfo.style.opacity = "0.0";
+                    nextQuestionBtn.style.display = "none";
                     backHomeBtn.removeAttribute('disabled');
-                    getNewQuestion()
-                }
-            }, 2500)
-        }, 1500)
-    })
-})
+                    getNewQuestion();
+                };
+            }, 2500);
+        }, 1500);
+    });
+});
+backFromInstructions.addEventListener('click', backHomePlease);
 /**
  * Bring you back home from any page
  */
@@ -157,7 +161,7 @@ function backHomePlease() {
 let incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
-}
+};
 
 /**
  * Bring End Game section when game finish
@@ -173,54 +177,47 @@ function startEndGame() {
 username.addEventListener('input', () => {
     username.value = username.value ? username.value.trimStart():'';
     saveScore.disabled = username.value.length < 3;
-})
+});
 
-saveHighScore = e => {
-    e.preventDefault()
+saveScore.addEventListener('click', saveHighScore);
+
+function saveHighScore(e){
+    e.preventDefault();
     
     const score = {
         score: localStorage.getItem('mostRecentScore'),
         name: username.value
-    }
+    };
     
-    highScores.push(score)
+    highScores.push(score);
     
     highScores.sort((a,b) => {
-        return b.score - a.score
-    })
+        return b.score - a.score;
+    });
     
-    highScores.splice(5)
+    highScores.splice(MAX_HIGH_SCORES);
     
-    localStorage.setItem('highScores', JSON.stringify(highScores))
+    localStorage.setItem('highScores', JSON.stringify(highScores));
     
-    showHighScores()
+    showHighScores();
 }
+
+startGameAgainBtn.addEventListener('click', startGameAgain);
 /**
  * Start game from End Game section
  */
 function startGameAgain() {
     endArea.style.display = "none";
-    /*finalScore.style.display = "none";*/
-
-    startGame();
+    startInstructions();
 }
 /**
  * Show High Scores from End Game section
  */
 function showHighScores() {
     endArea.style.display = "none";
-    /*finalScore.style.display = "none";*/
     highScoresArea.style.display = "inline";
     highScoresList.innerHTML =
     highScores.map(score => {
-    return `<li class="high-score-list">${score.name} - ${score.score}</li>`
-    }).join('')
-}
-/**
- * Start game from High Scores section
- */
-function startGameFromLeaderboard() {
-    highScoresArea.style.display = "none";
-    instructionsBtns.style.display = "inline";
-    instructions.style.display = "inline";
+    return `<li class="high-score-list">${score.name} - ${score.score}</li>`;
+    }).join('');
 }

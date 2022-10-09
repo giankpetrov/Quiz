@@ -38,8 +38,8 @@
             <h2>Good Luck!</h2>
         </div>
         <div id="instructions-btns" class="instructions-btns">
-            <button onclick="backHomePlease()">&laquo; Home</button>
-            <button onclick="startGame()">Play</button>
+            <button id="backFromInstructions" onclick="backHomePlease()">&laquo; Home</button>
+            <button id="play" onclick="startGame()">Play</button>
         </div>
         <!--                           Game Area                     -->
         <div id="game-area" class="game-area">
@@ -69,17 +69,17 @@
             <form class="end-form">
                 <input type="text" name="name" id="username" placeholder="Enter your name" class="form-name" minlength="3" maxlength="10" required>
                 <br>
-                <button id="saveScoreBtn" class="end-btn" onclick="saveHighScore(event)" disabled>Save</button>
+                <button id="saveScoreBtn" class="end-btn" disabled>Save</button>
             </form>
             <div>
-                <button class="end-btn" onclick="startGameAgain()">Play again</button>
+                <button id="startGameAgain" class="end-btn">Play again</button>
             </div>
         </div>
     <!--                              High Scores                               -->
         <div id="highScoresArea" class="high-scores-area">
             <h1>Leaderboard</h1>
             <ul id="highScoresList"></ul>
-            <button class="end-btn" onclick="startGameFromLeaderboard()">Play again</button>
+            <button class="end-btn" onclick="startInstructions()">Play again</button>
             <button class="end-btn" onclick="backHomePlease()">Back Home</button>
         </div>
     <!--                              Fixed footer                              -->
