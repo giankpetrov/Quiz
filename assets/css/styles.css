@@ -506,9 +506,20 @@ body {
         font-size: 1rem;
         margin: auto;
     }
+    /* Instructions*/
+    .instructions{
+        font-size: 1rem;
+        height: 90%;
+    }
+    .instructions-btns button{
+        height: 2rem;
+        width: 7rem;
+        margin: 0 0.5rem;
+        font-size: 1.3rem;
+    }
     /*Game Area*/
     .game-area {
-        margin-top: 1rem;
+        margin: auto;
     }
     .question-area h2 {
         font-size: 1.3rem;
@@ -521,13 +532,47 @@ body {
         font-size: 1.3rem;
     }
     .answers p {
-        width: auto;
+        width: 10rem;
     }   
     .extra-info p {
         font-size: 1rem;
     }
-    .next-question-btn{
-        width: 8rem;
+    .back-home-btn{
+        height: 2rem;
+        width: 7rem;
         font-size: 1.3rem;
+        margin-right: 8rem;
+    }
+    .next-question-btn{
+        height: 2rem;
+        width: 7rem;
+        font-size: 1.3rem;
+        margin-left: 8rem;
+    }
+    /* End Area*/
+    .end-area{
+        padding: 0.5rem;
+    }
+    .final-score{
+        font-size: 1.8rem;
+        padding-bottom: 0.5rem;
+    }
+    .form-name{
+        height: 2rem;
+        font-size: 1.1rem;
+    }
+    .end-btn{
+        height: 2rem;
+        font-size: 1.1rem;
+    }
+    /* High Score Area*/
+    .high-scores-area{
+        height: 90%;
+        padding: 0.5rem;
+        margin: 1.5rem;
+    }
+    .high-scores-area ul {
+        font-size: 1.3rem;
+        margin: 1rem;
     }
 }
