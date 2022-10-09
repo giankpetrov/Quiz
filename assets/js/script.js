@@ -61,7 +61,7 @@ function showHighScoresFromStart(){
 }
 
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 3;         
+const MAX_QUESTIONS = 10;         
 
 playBtn.addEventListener('click', startGame);
 
