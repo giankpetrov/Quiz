@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!---------------------CSS Link---------------------------->
+    <!--                           CSS Link                        -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!----------------------Favicon---------------------------->
+    <!--                           Favicon                         -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/favicon.ico">
     <title>World Cup Quiz</title>
 </head>
 <body>
     <div class="container">
-        <!------------------Loading page------------------------>
+        <!--                        Loading page                    -->
         <div id="front-img" class="front-img">
-            <img src="/assets/images/frontpage.webp">
+            <img src="/assets/images/frontpage.webp" alt="football stadium at night">
         </div>
         <div id="front-title" class="front-title">
             <h2>World Cup Quiz</h2>
@@ -25,23 +25,23 @@
             <br>
             <button id="leaderboard-btn">Leaderboard</button>
         </div>
-        <!------------------Intructions page-------------------->
+        <!--                       Intructions page                 -->
         <div id="instructions" class="instructions">
+            <h2>INSTRUCTIONS</h2>
             <ul>
-                <h2>INSTRUCTIONS</h2>
                 <li>Select the answer you think is correct.</li>
                 <li>Correct answers will turn green.</li>
                 <li>Incorrect answers will turn red.</li>
                 <li>On the last page type your name to save your score.</li>
                 <li>When you feel prepared, click the play button below.</li>
-                <h2>Good Luck!</h2>
             </ul>
+            <h2>Good Luck!</h2>
         </div>
         <div id="instructions-btns" class="instructions-btns">
             <button onclick="backHomePlease()">&laquo; Home</button>
             <button onclick="startGame()">Play</button>
         </div>
-        <!-------------------Game Area-------------------------->
+        <!--                           Game Area                     -->
         <div id="game-area" class="game-area">
             <div>
                 <h2 class="score">YOUR SCORE</h2>
@@ -62,7 +62,7 @@
         </div>
         <button id="back-home-btn" class="back-home-btn" onclick="backHomePlease()">&laquo; Home</button>
         <button id="next-question-btn" class="next-question-btn" onclick="nextQuestionPlease()">Next &raquo;</button>
-    <!------------------------End Page-------------------------->
+    <!--                             End Page                                  -->
         <div id="end-area" class="end-area">
             <h1 class="final-score">Your final score</h1>
             <h1 id="finalScore" class="final-score">0</h1>
@@ -75,23 +75,23 @@
                 <button class="end-btn" onclick="startGameAgain()">Play again</button>
             </div>
         </div>
-    <!-------------------------High Scores---------------------->
+    <!--                              High Scores                               -->
         <div id="highScoresArea" class="high-scores-area">
             <h1>Leaderboard</h1>
             <ul id="highScoresList"></ul>
             <button class="end-btn" onclick="startGameFromLeaderboard()">Play again</button>
             <button class="end-btn" onclick="backHomePlease()">Back Home</button>
         </div>
-    <!-------------------------Fixed footer--------------------->
+    <!--                              Fixed footer                              -->
         <div class="social">
             <a href="https://www.linkedin.com/in/ciampaglia/" target="_blank" rel="noopener" aria-label="Developer's linkedin page (opens in a new tab"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/giankpetrov" target="_blank" rel="noopener" aria-label="Developer's Github page (opens in a new tab"><i class="fab fa-github"></i></a>
             <p>Developed by Gianncarlo ciampaglia 2022</p>
         </div>
     </div>
-    <!------------------------Font Awesome Script--------------->
+    <!--                              Font Awesome Script                       -->
     <script src="https://kit.fontawesome.com/0c9bf02fd8.js" crossorigin="anonymous"></script>
-    <!----------------- Scripts--------------------------------->
+    <!--                              Scripts                                   -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
 </body>
