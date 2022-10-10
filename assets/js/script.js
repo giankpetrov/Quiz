@@ -92,6 +92,7 @@ const getNewQuestion = () => {
     
     questionCounter++;
     currentQuestionNumber.innerText = questionCounter;
+
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
@@ -102,6 +103,7 @@ const getNewQuestion = () => {
         choice.innerText = currentQuestion['choice'+ number];
     });
    
+    extraInfo.style.opacity = "0.0";
     infoText.innerText = currentQuestion.extra;
     
     availableQuestions.splice(questionsIndex, 1);
@@ -128,7 +130,7 @@ choices.forEach(choice => {
                 incrementScore(SCORE_POINTS);
                 scoreText.classList.add('scored');
             }
-            setTimeout(() =>{
+            setTimeout(() => {
                 extraInfo.style.opacity = "1.0";
             },1000 );
             setTimeout(() => {
@@ -167,7 +169,6 @@ let incrementScore = num => {
     score +=num;
     scoreText.innerText = score;
 };
-
 /**
  * Bring End Game section when game finish
  */

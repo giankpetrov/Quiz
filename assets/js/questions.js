@@ -159,7 +159,7 @@ const questions = [
     choice3: 'Uruguay',
     choice4: 'Argentina',
     answer: 1,   
-    extra: 'Traditional Savoy Blue, Italy is know as the "Azzurri'
+    extra: 'Traditional Savoy Blue, Italy is know as the "Azzurri"'
     },
     {
     question: 'Which team have the nickname "Three Lions"?',
