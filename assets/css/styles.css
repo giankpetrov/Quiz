@@ -7,7 +7,7 @@
     list-style: none;
 }
 body {
-    background: url(/assets/images/backgroundgeneral.webp) no-repeat center / cover;
+    background: url(assets/images/backgroundgeneral.webp) no-repeat center / cover;
     min-height: 100vh;
     font-family: Roboto, sans-serif;
     font-weight: 300;
