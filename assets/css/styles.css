@@ -233,7 +233,7 @@ body {
     }
     20%,60%,90%{
       color: white;
-      background: darkred;
+      background: black;
     }
     100% {
       color: white;
@@ -252,7 +252,7 @@ body {
     }
     20%,60%,90%{
       color: white;
-      background: darkred;
+      background: black;
     }
     100% {
       color: white;
