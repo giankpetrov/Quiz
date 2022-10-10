@@ -7,6 +7,8 @@ const instructionsBtns = document.getElementById('instructions-btns');
 const backFromInstructions = document.getElementById('backFromInstructions');
 const playBtn = document.getElementById('play');
 const gameArea = document.getElementById('game-area');
+const currentQuestionNumber = document.getElementById('current-question');
+const totalQuestionNumber = document.getElementById('total-questions');
 const questionText = document.getElementById('question-text');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const extraInfo = document.getElementById('extraInfo');
@@ -61,7 +63,9 @@ function showHighScoresFromStart(){
 }
 
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 10;         
+const MAX_QUESTIONS = 10;
+
+totalQuestionNumber.innerText = MAX_QUESTIONS;
 
 playBtn.addEventListener('click', startGame);
 
@@ -87,6 +91,7 @@ const getNewQuestion = () => {
     }
     
     questionCounter++;
+    currentQuestionNumber.innerText = questionCounter;
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];

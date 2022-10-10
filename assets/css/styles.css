@@ -121,6 +121,11 @@ body {
     margin: auto;
     width: 80%;
 }
+.total-questions {
+    color: gold;
+    font-size: 1rem;
+    text-shadow: 2px 2px black;
+}
 .score {
     color: gold;
     text-shadow: 2px 2px black;
@@ -353,7 +358,7 @@ body {
     }
     /* Game Area*/
     .game-area {
-        margin-top: 1rem;
+        margin: auto;
         width: 90%;
     }
     .score{
@@ -428,7 +433,6 @@ body {
         grid-column: 1;
         grid-row: 1 / span 2;
         width: 90%;
-        margin: auto;
     }
     .score {
         font-size: 2.2rem;
@@ -520,9 +524,6 @@ body {
         font-size: 1.3rem;
     }
     /*Game Area*/
-    .game-area {
-        margin: auto;
-    }
     .question-area h2 {
         font-size: 1.3rem;
     }
