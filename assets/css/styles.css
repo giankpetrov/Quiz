@@ -119,7 +119,6 @@ body {
     display: none;
     height: auto;
     margin: auto;
-    margin-top: 2rem;
     width: 80%;
 }
 .score {
@@ -150,7 +149,7 @@ body {
 .answers {
     display: grid;
     margin-top: 1rem;
-    gap: 0.5rem;
+    gap: 1.5rem;
     font-size: 1.8rem;
     color: #fff;
     justify-content: center;
@@ -429,7 +428,7 @@ body {
         grid-column: 1;
         grid-row: 1 / span 2;
         width: 90%;
-        margin-top: 2rem;
+        margin: auto;
     }
     .score {
         font-size: 2.2rem;
@@ -438,7 +437,6 @@ body {
         font-size: 1.5rem;
     }
     .answers {
-        gap: 1rem;
         font-size: 1.5rem;
     }
     .answers p {
@@ -499,6 +497,10 @@ body {
     .front-title {
         font-size: 1.5rem;
         margin: auto;
+    }
+    /*Game Area*/
+    .answers {
+        gap: 1rem;
     }
 }
 @media screen and (max-width: 320px){
