@@ -24,7 +24,6 @@ body {
     height: 100vh;
     grid-column: 1;
     grid-row: 1 / span 2;
-
 }
 .front-img img{
     width: 100%;
@@ -225,7 +224,7 @@ body {
     animation: correct 1.5s linear;
     animation-fill-mode: forwards;
 }
-
+/* animation when selecting choice */
 @keyframes correct {
     0%,40%,80% {
       color: black;
