@@ -54,55 +54,55 @@ The original idea was always to demonstrate the capabilities of JavaScript over 
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Main.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Main.png"/>
   </kbd>
 </p>
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Front%20Page.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Front%20Page.png"/>
   </kbd>
 </p>
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Instructions.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Instructions.png"/>
   </kbd>
 </p>
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Game.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Game.png"/>
   </kbd>
 </p>
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Steps.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Steps.png"/>
   </kbd>
 </p>
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/End%20Game.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/End%20Game.png"/>
   </kbd>
 </p>
 
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Leaderboard.png"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Leaderboard.png"/>
   </kbd>
 </p>
 
 Mobile wireframes were made and taking also in consideration Large, Medium and Small smartphones.
 <p align="center">
   <kbd>
-    <img height="600" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Moblile%20L%20M%20S.PNG"/>
+    <img height="400" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/Moblile%20L%20M%20S.PNG"/>
   </kbd>
 </p>
 <p align="center">
   <kbd>
-    <img height="1200" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/mobile%20wireframes.PNG"/>
+    <img height="800" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/wireframes/mobile%20wireframes.PNG"/>
   </kbd>
 </p>
 
