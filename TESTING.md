@@ -1,20 +1,21 @@
 
 ## __User Testing__
 
+Following the requirements from the user stories, requirements were meet and results are presented below.
+
 | User Goal | Requirement meet | Image(s) |
 | --------- | --------------- | -------- |
-| As a user, I would like to be able to see clearly how to start the game. | Yes |<kbd><img height="200" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/frontpagebuttons.PNG"></kbd>|
-| As a user, I would like to check the Leaderboard. | Yes |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/leaderboard.PNG"></kbd>|
-| As a user, I would like to be able to see instructions before start the game. | Yes |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/instructions.PNG"></kbd>|
-| As a user, I would like to know which is the current question number. | Yes |<kbd><img height="150" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/scoreboard.PNG"></kbd>|
-| As a user, I would like to know how many questions are in the Quiz. | Yes |<kbd><img height="150" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/scoreboard.PNG"></kbd>|
-| As a user, I would like to see my current score when the game started. | Yes |<kbd><img height="150" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/scoreboard.PNG"></kbd>|
-| As a user, I would like to see clearly the question and available choices. | Yes |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/questionsandchoices.PNG"></kbd>|
-| As a user, I would like to see which choice I am in before final selection. | Yes |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/hover.PNG"></kbd>|
-| As a user, I would like to be able to go to main page if the game already started. | Yes |<kbd><img height="100" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/gamebuttons.PNG"></kbd>|
-| As a user, I would like to be able to go to next question after finishing the current question. | Yes |<kbd><img height="100" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/gamebuttons.PNG"></kbd>|
-| As a user, I would like to see my final score after finishing the Quiz. | Yes |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/savescoreform.PNG"></kbd>|
-| As a user, I would like to save my score with my name. | Yes |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/savescoreform.PNG"></kbd>|
+| <p align="center">As a user, I would like to check the Leaderboard.</p> | <p align="center">**Yes**.<br><br> - On the front page there are buttons to navigate to the Leaderboard.</p>|<kbd><img height="200" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/frontpagebuttons.PNG"></kbd><kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/leaderboard.PNG"></kbd>|
+| <p align="center">As a user, I would like to be able to see instructions before start the game.</p> | <p align="center">**Yes**.<br><br> - After the front page there are instructions displayed before starting the game<p/> |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/instructions.PNG"></kbd>|
+| <p align="center">As a user, I would like to know which is the current question number.</p> | <p align="center">**Yes**.<br><br> - On the game area there is a scoreboard displaying the requirement</p>|<kbd><img height="150" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/scoreboard.PNG"></kbd>|
+|<p align="center">As a user, I would like to know how many questions are in the Quiz.</p> | <p align="center">**Yes**.<br><br> - On the game area there is a scoreboard displaying the requirement</p>|<kbd><img height="150" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/scoreboard.PNG"></kbd>|
+| <p align="center">As a user, I would like to see my current score when the game started.</p> |<p align="center">**Yes**.<br><br> - On the game area there is a scoreboard displaying the requirement</p>|<kbd><img height="150" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/scoreboard.PNG"></kbd>|
+| <p align="center">As a user, I would like to see clearly the question and available choices.</p> | <p align="center">**Yes**.<br><br> - On the game area questions are being displayed with the corresponding choices.</p> |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/questionsandchoices.PNG"></kbd>|
+| <p align="center">As a user, I would like to see which choice I am in before final selection.</p> | <p align="center">**Yes**.<br><br> - A hover effect was design to show the user on which choice they are currently in.</p>|<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/hover.PNG"></kbd>|
+| <p align="center">As a user, I would like to be able to go to main page if the game already started.</p> | <p align="center">**Yes**.<br><br> - On the game area, one button allows the user to return to the main page</p>  |<kbd><img height="100" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/gamebuttons.PNG"></kbd>|
+| <p align="center">As a user, I would like to be able to go to next question after finishing the current question.</p> | <p align="center">**Yes**.<br><br> - On the game area, after an answer have been chosen a button is displayed allowing the user advance to the next question.</p> |<kbd><img height="100" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/gamebuttons.PNG"></kbd>|
+| <p align="center">As a user, I would like to see my final score after finishing the Quiz.</p> | <p align="center">**Yes**.<br><br> - When the Quiz ends, an end game area is displayed showing last score from the user.</p>  |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/savescoreform.PNG"></kbd>|
+| <p align="center">As a user, I would like to save my score with my name.</p> | <p align="center">**Yes**.<br><br> - On the end game area, a form allows the user to save their current score </p> |<kbd><img height="250" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/savescoreform.PNG"></kbd>|
 
 ### __Validator Testing__
 
