@@ -27,7 +27,6 @@ The Quiz is targeted to football fans who also understand english language with 
 
 ### __User Stories__
 
-- As a user, I would like to be able to see clearly how to start the game.
 - AS a user, I would like to check the Leaderboard.
 - As a user, I would like to be able to see instructions before start the game.
 - As a user, I would like to know which is the current question number.
