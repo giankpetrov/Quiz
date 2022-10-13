@@ -107,3 +107,72 @@ JSHint identify **questions** as one unused variable but as explained before is 
     <img height="300" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/questionsjsresults.PNG"/>
   </kbd>
 </p>
+
+- Lighthouse
+
+__Performance__
+
+Performance reached 99.
+<p align="center">
+  <kbd>
+    <img height="300" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthouseperformance.PNG"/>
+  </kbd>
+</p>
+
+This is because Lighthouse identify that efficient Cache policy should be on placed. This cannot be manage in this case as we don't have access to the server on **Github pages**
+<p align="center">
+  <kbd>
+    <img height="200" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthouseperformancecache.PNG"/>
+  </kbd>
+</p>
+
+__Performance__
+Performance reached 99.
+<p align="center">
+  <kbd>
+    <img height="300" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthouseperformance.PNG"/>
+  </kbd>
+</p>
+
+This is because Lighthouse identify that efficient Cache policy should be on placed. This cannot be manage in this case as we don't have access to the server on **Github pages**
+<p align="center">
+  <kbd>
+    <img height="300" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthouseperformancecache.PNG"/>
+  </kbd>
+</p>
+
+
+__Accessibility__
+
+Accessibility reached 100.
+<p align="center">
+  <kbd>
+    <img height="200" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthouseaccessibility.PNG"/>
+  </kbd>
+</p>
+
+__Best Practices__
+
+The test for **Best Practices** did not reach 100 as Lighthouse identify that "Display images with incorrect aspect ratio".
+<p align="center">
+  <kbd>
+    <img height="300" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthousebestpracticesimage.PNG"/>
+  </kbd>
+</p>
+
+This is because the image is set to a height as a percentage of a variable-sized container. One example is Line **343** from the **styles.css** document.
+```css
+340 /*Media Query responsive*/
+341 @media screen and (max-width: 768px){
+342     .front-img img{
+343         height: 80%;
+344     }
+```
+__SEO__
+
+SEO results reached 100.
+<p align="center">
+  <kbd>
+    <img height="200" src="https://github.com/giankpetrov/WorldCupQuiz/blob/main/docs/testing/lighthouseseo.PNG"/>
+  </kbd>
+</p
